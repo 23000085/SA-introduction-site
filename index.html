@@ -1,0 +1,613 @@
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>昭和学院中学校・高等学校 サイエンスアカデミーコース(SA)</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- 外部CSSファイルを読み込むリンク -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 背景用キャンバス -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ヘッダー -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-sub">SHOWA GAKUIN</span>
+        <span class="logo-main">SCIENCE ACADEMY</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#concept">CONCEPT</a>
+        <a href="#features">FEATURES</a>
+        <a href="#research">RESEARCH</a>
+        <a href="#environment">ENVIRONMENT</a>
+        <a href="#entry" class="cta-nav">INQUIRE</a>
+      </nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="badge fade-in">SCIENCE ACADEMY COURSE</div>
+      <h1 class="hero-title fade-in">
+        <span class="gradient-text">好奇心で世界を切り拓く。</span><br>
+        科学のロマンを追え！
+      </h1>
+      <p class="hero-lead fade-in">
+        世界の誰も知らない「未知」を明らかにする、本物の研究活動がここに。<br>
+        昭和学院から世界へ羽ばたく、次世代の科学者・研究者のためのプラットフォーム。
+      </p>
+      <div class="hero-stats fade-in">
+        <div class="stat-item">
+          <span class="stat-num" data-target="8">0</span>
+          <span class="stat-label">研究領域</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="100" data-suffix="%">0</span>
+          <span class="stat-label">本気度の研究</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="2023" data-no-scroll="true">2023</span>
+          <span class="stat-label">コース創設</span>
+        </div>
+      </div>
+      <div class="hero-btns fade-in">
+        <a href="#research" class="btn btn-primary">
+          <span>研究フィールドを見る</span>
+          <i class="fas fa-microscope"></i>
+        </a>
+        <a href="#concept" class="btn btn-outline">
+          <span>SAコースとは</span>
+          <i class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="orbit-container">
+      <div class="orbit-line line-1">
+        <div class="orbit-planet planet-1"></div>
+      </div>
+      <div class="orbit-line line-2">
+        <div class="orbit-planet planet-2"></div>
+      </div>
+      <div class="orbit-line line-3"></div>
+    </div>
+    <div class="scroll-indicator">
+      <span>SCROLL DOWN</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
+
+  <!-- コンセプト -->
+  <section class="concept-section scroll-trigger" id="concept">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="sec-subtitle">CONCEPT</span>
+        <h2 class="sec-title">科学で遊び、学びを楽しむ</h2>
+        <div class="header-bar"></div>
+      </div>
+      
+      <div class="grid-2col">
+        <div class="concept-text">
+          <h3>「理系理数」の枠を超え、<br>論理的・科学的思考の「型」を習得する</h3>
+          <p>
+            サイエンスアカデミー（SA）コースは、単に理科のテストで高得点を取るためのクラスではありません。
+            本物の研究活動を通して、<strong>「仮説を立て、実験し、検証を重ねる」</strong>という、一生通用する論理的思考プロセスを身につけることを目的としています。
+          </p>
+          <p>
+            「科学が好き」という好奇心をバネに、他教科とも連動した教科横断型のカリキュラムで総合的な学びを展開。英語での論文読解や発表にも取り組み、国際的に活躍できる視野を広げます。
+          </p>
+          <div class="quote-box">
+            <p>「世界中でまだ誰も答えを知らない、未知のテーマに挑戦する。そのプロセスこそが、最大の学びです。」</p>
+            <cite>— コース長 榎本裕介 先生</cite>
+          </div>
+        </div>
+        
+        <div class="concept-visual">
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="status-dot"></span>
+              <span class="panel-title">SYSTEM_LOG // SA_MISSION</span>
+            </div>
+            <div class="tech-card-body">
+              <div class="mission-item">
+                <div class="num-badge">01</div>
+                <div>
+                  <h4>本物の研究プロセス</h4>
+                  <p>週1時間の研究活動や放課後を使い、自ら決定したテーマで本格的な論文作成・学会発表を目指します。</p>
+                </div>
+              </div>
+              <div class="mission-item">
+                <div class="num-badge">02</div>
+                <div>
+                  <h4>Pythonによるプログラミング</h4>
+                  <p>朝活動の時間を活用し、AIやデータ解析の標準言語であるPythonを個別の習熟度に合わせて実践的に学びます。</p>
+                </div>
+              </div>
+              <div class="mission-item">
+                <div class="num-badge">03</div>
+                <div>
+                  <h4>社会・学術界との強力な連携</h4>
+                  <p>千葉大学、東京学芸大学などの大学・研究機関や、Google、清水建設といった企業への社会見学や共同プログラムを実施。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 特徴 -->
+  <section class="features-section scroll-trigger" id="features">
+    <div class="section-container">
+      <div class="section-header center">
+        <span class="sec-subtitle">FEATURES</span>
+        <h2 class="sec-title">未来を拓く3つの学びのポイント</h2>
+        <div class="header-bar"></div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>科学的思考の「型」</h3>
+          <p>仮説の設定から実験、データ解析、論文執筆、ディスカッションまで、大学や企業でも通用する研究活動の一連の「型」を徹底的に叩き込みます。</p>
+          <div class="card-footer">LEARN MORE <i class="fas fa-chevron-right"></i></div>
+        </div>
+
+        <div class="feature-card">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h3>教科横断型アプローチ</h3>
+          <p>科学のテーマを英語の長文読解で扱い、現代文で科学論を読み解く。専門の枠にとらわれず、多角的に知的刺激を与えるユニークなカリキュラムです。</p>
+          <div class="card-footer">LEARN MORE <i class="fas fa-chevron-right"></i></div>
+        </div>
+
+        <div class="feature-card">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>大学・一流企業連携</h3>
+          <p>最先端の現場に直接触れる体験。大学教授や企業研究者による講義やアドバイスを受け、自分の研究をさらに深めていきます。</p>
+          <div class="card-footer">LEARN MORE <i class="fas fa-chevron-right"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8つの研究領域 -->
+  <section class="research-section scroll-trigger" id="research">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="sec-subtitle">8 RESEARCH FIELDS</span>
+        <h2 class="sec-title">本気で挑む、8つの研究領域</h2>
+        <p class="section-intro">生徒が教員とともに「ゼミ形式」で、それぞれの興味に基づいて探究する8つの科学分野。</p>
+        <div class="header-bar"></div>
+      </div>
+
+      <div class="research-tab-container">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="field-wind">
+            <span class="tab-icon"><i class="fas fa-wind"></i></span>
+            <span class="tab-text">風力発電</span>
+          </button>
+          <button class="tab-btn" data-tab="field-embryo">
+            <span class="tab-icon"><i class="fas fa-dna"></i></span>
+            <span class="tab-text">発生学</span>
+          </button>
+          <button class="tab-btn" data-tab="field-bio">
+            <span class="tab-icon"><i class="fas fa-leaf"></i></span>
+            <span class="tab-text">地域環境生物学</span>
+          </button>
+          <button class="tab-btn" data-tab="field-animal">
+            <span class="tab-icon"><i class="fas fa-crow"></i></span>
+            <span class="tab-text">動物行動学</span>
+          </button>
+          <button class="tab-btn" data-tab="field-acoustic">
+            <span class="tab-icon"><i class="fas fa-volume-high"></i></span>
+            <span class="tab-text">音響工学</span>
+          </button>
+          <button class="tab-btn" data-tab="field-food">
+            <span class="tab-icon"><i class="fas fa-flask"></i></span>
+            <span class="tab-text">食品化学</span>
+          </button>
+          <button class="tab-btn" data-tab="field-plant">
+            <span class="tab-icon"><i class="fas fa-seedling"></i></span>
+            <span class="tab-text">植物遺伝学</span>
+          </button>
+          <button class="tab-btn" data-tab="field-prog">
+            <span class="tab-icon"><i class="fas fa-code"></i></span>
+            <span class="tab-text">制御システム</span>
+          </button>
+        </div>
+
+        <div class="tab-contents">
+          <!-- 1. 風力発電 -->
+          <div class="tab-panel active" id="field-wind">
+            <div class="panel-inner">
+              <div class="panel-text">
+                <span class="panel-num">FIELD 01</span>
+                <h3>風力発電</h3>
+                <p class="tagline">流体力学から探る、未来のクリーンエネルギー</p>
+                <p>
+                  一般的な風車は流体力学に基づき最適化された形状です。しかし「もっと小さなスケール（学校や家庭規模）における最適な形とは何か？」をテーマに、3Dプリンターや風洞実験装置を用いて、これまでにない超高効率なブレード形状を追究します。
+                </p>
+                <div class="features-list">
+                  <span><i class="fas fa-check"></i> 3Dプリンターによるプロトタイプ作成</span>
+                  <span><i class="fas fa-check"></i> 気流・流体シミュレーションの活用</span>
+                  <span><i class="fas fa-check"></i> 実用的な小型発電デバイスの開発</span>
+                </div>
+              </div>
+              <div class="panel-visual bg-gradient-wind">
+                <div class="visual-overlay"></div>
+                <div class="visual-icon"><i class="fas fa-wind"></i></div>
+                <div class="visual-tag">FLUID DYNAMICS</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. 発生学 -->
+          <div class="tab-panel" id="field-embryo">
+            <div class="panel-inner">
+              <div class="panel-text">
+                <span class="panel-num">FIELD 02</span>
+                <h3>発生学</h3>
+                <p class="tagline">受精卵から1つの生命へ育つ、神秘のプログラム</p>
+                <p>
+                  1個の受精卵がどのように分裂し、精密に形作られていくのか。細胞の連携メカニズムを探求し、生命のデザインに秘められたルールを解き明かします。
+                </p>
+                <div class="features-list">
+                  <span><i class="fas fa-check"></i> 遺伝子レベルのメカニズム解明</span>
+                  <span><i class="fas fa-check"></i> 最新の生物顕微鏡を用いた細胞観察</span>
+                  <span><i class="fas fa-check"></i> 生物の構造形成プログラムの検証</span>
+                </div>
+              </div>
+              <div class="panel-visual bg-gradient-embryo">
+                <div class="visual-overlay"></div>
+                <div class="visual-icon"><i class="fas fa-dna"></i></div>
+                <div class="visual-tag">EMBRYOLOGY</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. 地域環境生物学 -->
+          <div class="tab-panel" id="field-bio">
+            <div class="panel-inner">
+              <div class="panel-text">
+                <span class="panel-num">FIELD 03</span>
+                <h3>地域環境生物学</h3>
+                <p class="tagline">身近な生態系から、地球環境をミクロに捉える</p>
+                <p>
+                  学校周辺や地元の河川、里山などに生息する生物多様性をフィールドワーク。都市化が生態系に与える影響をサンプリングと分析によって明らかにします。
+                </p>
+                <div class="features-list">
+                  <span><i class="fas fa-check"></i> 定期的なフィールドワーク</span>
+                  <span><i class="fas fa-check"></i> 生物指標を用いた環境評価</span>
+                  <span><i class="fas fa-check"></i> 生態系保護のアイデア提案</span>
+                </div>
+              </div>
+              <div class="panel-visual bg-gradient-bio">
+                <div class="visual-overlay"></div>
+                <div class="visual-icon"><i class="fas fa-leaf"></i></div>
+                <div class="visual-tag">ECOLOGY</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. 動物行動学 -->
+          <div class="tab-panel" id="field-animal">
+            <div class="panel-inner">
+              <div class="panel-text">
+                <span class="panel-num">FIELD 04</span>
+                <h3>動物行動学</h3>
+                <p class="tagline">動物たちの行動に隠された、驚異のロジック</p>
+                <p>
+                  昆虫や鳥類などの不思議な行動パターンにはすべて生存・繁殖のための理由があります。観察実験や映像分析を用いて動物たちの行動ロジックを研究します。
+                </p>
+                <div class="features-list">
+                  <span><i class="fas fa-check"></i> 高精度カメラを用いた行動追跡</span>
+                  <span><i class="fas fa-check"></i> 生存戦略に関する論理の応用</span>
+                  <span><i class="fas fa-check"></i> 刺激と反応のモデル分析</span>
+                </div>
+              </div>
+              <div class="panel-visual bg-gradient-animal">
+                <div class="visual-overlay"></div>
+                <div class="visual-icon"><i class="fas fa-crow"></i></div>
+                <div class="visual-tag">ETHOLOGY</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. 音響工学 -->
+          <div class="tab-panel" id="field-acoustic">
+            <div class="panel-inner">
+              <div class="panel-text">
+                <span class="panel-num">FIELD 05</span>
+                <h3>音響工学</h3>
+                <p class="tagline">「波」としての音をコントロールし、新しい世界を創る</p>
+                <p>
+                  物理現象としての「音」を多角的に分析。ノイズキャンセリングの仕組み、楽器やスピーカーの振動など、音の波動特性を用いた応用研究を行います。
+                </p>
+                <div class="features-list">
+                  <span><i class="fas fa-check"></i> 音響解析ソフトによるプロファイリング</span>
+                  <span><i class="fas fa-check"></i> 共鳴デバイスの開発実験</span>
+                  <span><i class="fas fa-check"></i> 音を用いた非接触センシング</span>
+                </div>
+              </div>
+              <div class="panel-visual bg-gradient-acoustic">
+                <div class="visual-overlay"></div>
+                <div class="visual-icon"><i class="fas fa-volume-high"></i></div>
+                <div class="visual-tag">ACOUSTICS</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. 食品化学 -->
+          <div class="tab-panel" id="field-food">
+            <div class="panel-inner">
+              <div class="panel-text">
+                <span class="panel-num">FIELD 06</span>
+                <h3>食品化学</h3>
+                <p class="tagline">美味しさと栄養を、化学結合と分析から再設計する</p>
+                <p>
+                  味、香り、食感といった食品の個性を化学物質の相互作用として分析。発酵プロセスや酸化を抑える条件を探り、食品の新しい魅力を引き出します。
+                </p>
+                <div class="features-list">
+                  <span><i class="fas fa-check"></i> 成分分析・分離技術の体験</span>
+                  <span><i class="fas fa-check"></i> 微生物培養のコントロール</span>
+                  <span><i class="fas fa-check"></i> 食品成分の機能性探究</span>
+                </div>
+              </div>
+              <div class="panel-visual bg-gradient-food">
+                <div class="visual-overlay"></div>
+                <div class="visual-icon"><i class="fas fa-flask"></i></div>
+                <div class="visual-tag">FOOD CHEMISTRY</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. 植物遺伝学 -->
+          <div class="tab-panel" id="field-plant">
+            <div class="panel-inner">
+              <div class="panel-text">
+                <span class="panel-num">FIELD 07</span>
+                <h3>植物遺伝学</h3>
+                <p class="tagline">植物の適応能力から、未来の農業と緑化のヒントを探る</p>
+                <p>
+                  環境ストレス（乾燥や低温など）に対して植物がどのように適応し、遺伝子のスイッチを切り替えるのかを研究。効率的な育成方法について設計します。
+                </p>
+                <div class="features-list">
+                  <span><i class="fas fa-check"></i> PCR等による遺伝子解析の基本理解</span>
+                  <span><i class="fas fa-check"></i> 植物成長ホルモンと適応メカニズム</span>
+                  <span><i class="fas fa-check"></i> 環境制御による生育シミュレーション</span>
+                </div>
+              </div>
+              <div class="panel-visual bg-gradient-plant">
+                <div class="visual-overlay"></div>
+                <div class="visual-icon"><i class="fas fa-seedling"></i></div>
+                <div class="visual-tag">PLANT GENETICS</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. 制御システム -->
+          <div class="tab-panel" id="field-prog">
+            <div class="panel-inner">
+              <div class="panel-text">
+                <span class="panel-num">FIELD 08</span>
+                <h3>制御システム</h3>
+                <p class="tagline">ソフトウェアとハードウェアが融合するスマートシステム</p>
+                <p>
+                  Pythonなどのプログラミングとセンサーを組み合わせ、自律ロボットの制御を研究。自動運転やIoT、簡単なAI画像認識の仕組みを実践的に学びます。
+                </p>
+                <div class="features-list">
+                  <span><i class="fas fa-check"></i> マイコン・センサーを用いた電子工作</span>
+                  <span><i class="fas fa-check"></i> Pythonによるデータ処理とフィードバック</span>
+                  <span><i class="fas fa-check"></i> 自律動作ロボットのアルゴリズム構築</span>
+                </div>
+              </div>
+              <div class="panel-visual bg-gradient-prog">
+                <div class="visual-overlay"></div>
+                <div class="visual-icon"><i class="fas fa-code"></i></div>
+                <div class="visual-tag">CONTROL ROBOTICS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 環境と設備 -->
+  <section class="environment-section scroll-trigger" id="environment">
+    <div class="section-container">
+      <div class="section-header center">
+        <span class="sec-subtitle">LABORATORIES & EQUIPMENT</span>
+        <h2 class="sec-title">研究者を育てる、一級の研究環境</h2>
+        <div class="header-bar"></div>
+      </div>
+
+      <div class="env-layout">
+        <div class="env-info">
+          <h3>本物のアカデミアと同様の、本格的な設備を日常に</h3>
+          <p>
+            昭和学院のSAコースには、大学の研究室や企業の開発センターで見られる「本物の機器」を完備しています。安全かつ高度な実験ができるよう、指導を徹底しています。
+          </p>
+          <ul class="env-list">
+            <li>
+              <div class="env-icon"><i class="fas fa-box-tissue"></i></div>
+              <div class="env-desc">
+                <strong>クリーンベンチ</strong>
+                <p>無菌状態で培養・操作を行える無塵空間を作り出す装置。生物学・発生学などの実験に威力を発揮します。</p>
+              </div>
+            </li>
+            <li>
+              <div class="env-icon"><i class="fas fa-print"></i></div>
+              <div class="env-desc">
+                <strong>3Dプリンター</strong>
+                <p>アイデアを即座に形にする。風力発電の翼やロボットのパーツ設計など、高速なプロトタイピングが可能です。</p>
+              </div>
+            </li>
+            <li>
+              <div class="env-icon"><i class="fas fa-network-wired"></i></div>
+              <div class="env-desc">
+                <strong>ハイスペックPC & Python開発環境</strong>
+                <p>大量の実験データ解析、3D CADによる設計、AIモデルの構築を行うための処理環境を整えています。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="env-gallery">
+          <div class="gallery-large">
+            <div class="lab-card">
+              <span class="lab-tag">BIOLOGY LAB</span>
+              <h4>最先端バイオラボ</h4>
+              <p>クリーンベンチと精密顕微鏡群が並び、常に高度な生命科学アプローチを可能にする特別実験室。</p>
+            </div>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-small s1">
+              <div class="lab-card">
+                <span class="lab-tag">PHYSICS LAB</span>
+                <h4>デジタルものづくり</h4>
+              </div>
+            </div>
+            <div class="gallery-small s2">
+              <div class="lab-card">
+                <span class="lab-tag">IT LAB</span>
+                <h4>Python & データ解析</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ロードマップ -->
+  <section class="roadmap-section scroll-trigger">
+    <div class="section-container">
+      <div class="section-header center">
+        <span class="sec-subtitle">6-YEAR ROADMAP</span>
+        <h2 class="sec-title">中高6年間の探究ストーリー</h2>
+        <div class="header-bar"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">中学1〜2年 // 基礎習得期</span>
+            <h3>科学的思考の「基礎の型」を習得する</h3>
+            <p>
+              テーマ設定、文献調査、仮説検証の方法をゼミ形式で学びます。朝学習でのPythonプログラミングや、五感を刺激する科学体験から知的興味を育てます。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">中学3年〜高校1年 // 研究実践期</span>
+            <h3>自分で決めたテーマの実験と、データの蓄積</h3>
+            <p>
+              一人ひとりが独自の探究テーマを決定し、本格的な実験をスタート。データ検証スキルを高め、科学的に精度の高い発見を目指します。
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">高校2〜3年 // 成果・発信期</span>
+            <h3>論文執筆と、外部学会での発表に挑む</h3>
+            <p>
+              研究成果を学術論文にまとめ、外部の発表会やコンテストに参加。プロの研究者や大学教授とも議論を交わし、思考の視野を世界へと広げます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section class="cta-section scroll-trigger" id="entry">
+    <div class="section-container">
+      <div class="cta-inner">
+        <div class="cta-glow"></div>
+        <h2>世界を驚かせる準備はできたか？</h2>
+        <p>理数系の得意・不得意は関係ありません。何かに本気で熱中してみたい、誰も知らない答えを見つけたい。そんな純粋な知的探究心をもった挑戦者を待っています。</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-primary btn-large"><span>学校説明会・個別相談へ</span> <i class="fas fa-calendar-check"></i></a>
+          <a href="#" class="btn btn-outline btn-large"><span>デジタルパンフレット</span> <i class="fas fa-file-pdf"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="main-footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-title">昭和学院中学校・高等学校</span>
+          <span class="brand-course">サイエンスアカデミーコース</span>
+          <p class="address">〒272-0823 千葉県市川市東菅野2丁目17-1</p>
+        </div>
+        <div class="footer-links">
+          <h4>NAVIGATION</h4>
+          <ul>
+            <li><a href="#hero">ホーム</a></li>
+            <li><a href="#concept">SAの理念</a></li>
+            <li><a href="#features">学びのポイント</a></li>
+            <li><a href="#research">8つの研究領域</a></li>
+            <li><a href="#environment">施設・設備</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>RESOURCES</h4>
+          <ul>
+            <li><a href="https://showa-gkn.ed.jp" target="_blank">昭和学院 公式サイト <i class="fas fa-external-link-alt"></i></a></li>
+            <li><a href="#">受験生の方へ</a></li>
+            <li><a href="#">ニュース＆トピックス</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Showa Gakuin Junior & Senior High School Science Academy. All Rights Reserved.</p>
+        <div class="tech-timestamp" id="techClock">SYSTEM_ONLINE // UTC+9</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 外部JavaScriptファイルを読み込むスクリプト -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+```
